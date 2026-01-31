@@ -1,4 +1,4 @@
-package com.sinodash.sb.logging_default.config;
+package com.sinodash.sb.logging_default.config.filter;
 
 import java.io.IOException;
 import java.util.UUID;
