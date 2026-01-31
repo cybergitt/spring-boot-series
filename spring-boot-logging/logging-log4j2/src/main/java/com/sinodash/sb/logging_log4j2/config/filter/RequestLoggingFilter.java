@@ -1,4 +1,4 @@
-package com.sinodash.sb.logging_log4j2.config;
+package com.sinodash.sb.logging_log4j2.config.filter;
 
 import java.io.IOException;
 import java.util.UUID;
