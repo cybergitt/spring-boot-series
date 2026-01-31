@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: logging-slf4j
