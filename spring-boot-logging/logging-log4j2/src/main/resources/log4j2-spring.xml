@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN"> <!-- Status level for Log4j's internal logging -->
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} - [%X{traceId}] %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <!-- You can add a RollingFile appender here for file logging if needed -->
+    </Appenders>
+
+    <Loggers>
+        <!-- Custom logger for your application's package with a specific level -->
+        <!-- <Logger name="com.example.yourapplication" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender" />
+        </Logger> -->
+
+        <!-- Root logger logs everything else at the INFO level or higher -->
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender" />
+        </Root>
+    </Loggers>
+</Configuration>

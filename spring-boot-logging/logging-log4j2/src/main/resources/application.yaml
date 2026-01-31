@@ -1,3 +1,37 @@
 spring:
   application:
     name: logging-log4j2
+
+logging:
+  level:
+    root: INFO # Default log level for the entire application
+    "[org.springframework.web]": DEBUG # Specific log level for Spring Web
+    "[com.sinodash.sb]": TRACE # Specific log level for a package
+
+management:
+  endpoints:
+    web:
+      # Expose specific endpoints, e.g., health, info, prometheus, loggers.
+      # 'health' and 'info' are exposed by default in recent versions.
+      exposure:
+        include: "health, info, metrics, loggers, shutdown"
+        # Alternatively, use "*" to expose all available endpoints (use with caution in production).
+        # include: "*"
+      # Exclude specific endpoints (optional).
+      # exclude: "env"
+    # Liveness and readiness probes are enabled by default in Spring Boot 4.
+    # health:
+    #   enabled: true
+  endpoint:
+    # Configure specific endpoints.
+    health:
+      # Show full details to unauthenticated users (useful for monitoring systems).
+      show-details: "always"
+      # Group health indicators for liveness and readiness probes.
+      probes:
+        enabled: true
+  server:
+    # Optionally use a different port for actuator endpoints (e.g., 9000).
+    # port: 9000
+    # Optionally use a different base path for actuator endpoints (default is /actuator).
+    base-path: "/actuator"
