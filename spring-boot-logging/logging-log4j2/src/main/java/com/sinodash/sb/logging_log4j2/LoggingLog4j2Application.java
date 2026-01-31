@@ -1,13 +1,13 @@
-package com.sinodash.sb.logging_slf4j;
+package com.sinodash.sb.logging_log4j2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LoggingSlf4jApplication {
+public class LoggingLog4j2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LoggingSlf4jApplication.class, args);
+		SpringApplication.run(LoggingLog4j2Application.class, args);
 	}
 
 }

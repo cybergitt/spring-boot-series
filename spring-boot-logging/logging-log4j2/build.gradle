@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.sinodash.sb'
 version = '0.0.1-SNAPSHOT'
-description = 'Demo project for Spring Boot SLF4J Logging'
+description = 'Demo project for Spring Boot Log4j2'
 
 java {
 	toolchain {

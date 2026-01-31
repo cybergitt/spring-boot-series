@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: logging-log4j2
