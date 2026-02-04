@@ -7,7 +7,7 @@ The main comparison points generally revolve around performance, footprint, stab
 ## Key Differences and Comparison
 
 | **Feature** | **Tomcat** | **Jetty** | **Undertow** |
-|---|---|---|
+|---|---|---|---|
 | **Concurrency Model** | Thread-per-request (traditional) | Event-driven (hybrid) | Event-driven (non-blocking I/O) |
 | **Performance** | Reliable, good all-around performance. | Generally good, slightly slower at low load in some tests. | Excellent, especially under high, concurrent loads with virtual threads. |
 | **Stability** | Highly stable, mature, and widely adopted; a very safe choice. | Stable and widely used. | Stable, but less battle-tested than Tomcat in some contexts. |
