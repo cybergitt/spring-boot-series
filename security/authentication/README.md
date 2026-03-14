@@ -11,6 +11,8 @@ Authentication in **Spring Security** is the process of verifying a user’s ide
 
 ### 1. Basic Authentication
 
+You could see the project [here](/security-basic-auth)
+
 Basic authentication is a simple authentication method that involves sending a user's credentials (username and password) in plain text with each request. Here is how it
 
 1. The client requests a protected resource.
@@ -35,6 +37,8 @@ Credentials are Base64-encoded, not encrypted.
 - Not suitable for user-facing applications
 
 ### 2. Form-Based Authentication
+
+You could see the project [here](/security-form-auth)
 
 Form-based authentication uses a custom login page where users submit credentials through an HTML form.
 
