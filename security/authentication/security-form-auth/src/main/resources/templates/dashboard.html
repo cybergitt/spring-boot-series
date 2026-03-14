@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, <span sec:authentication="name">User</span>!</h1>
+
+    <div sec:authorize="isAuthenticated()">
+        <h3>Your Account Details</h3>
+        <p><strong>Username:</strong> <span th:text="${username}">username</span></p>
+
+        <!-- Specific content for Admins -->
+        <div style="border: 1px solid red; padding: 10px;">
+            <h4>Admin Panel</h4>
+            <p>You have access to administrative tools.</p>
+        </div>
+    </div>
+
+    <hr>
+    <!-- Logout button inside a POST form for CSRF compliance -->
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Sign Out</button>
+    </form>
+</body>
+</html>

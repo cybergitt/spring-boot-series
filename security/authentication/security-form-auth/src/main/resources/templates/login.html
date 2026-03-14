@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Spring Security Login</title>
+</head>
+<body>
+    <h3>Custom Login Page</h3>
+    <div th:if="${param.error}">
+        Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <form method="POST" th:action="@{/login}">
+        <div>
+            <label> Username : <input type="text" name="username"/> </label>
+        </div>
+        <div>
+            <label> Password: <input type="password" name="password"/> </label>
+        </div>
+        <div>
+            <input type="submit" value="Sign In"/>
+        </div>
+    </form>
+    <!-- CSRF token is automatically included by Thymeleaf security integration -->
+</body>
+</html>
