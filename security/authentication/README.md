@@ -64,6 +64,8 @@ Form-based authentication uses a custom login page where users submit credential
 
 ### 3. Token-Based Authentication
 
+You could see the project [here](/security-jwt-auth)
+
 Token-based authentication uses tokens instead of sessions, commonly implemented using JSON Web Tokens (JWT).
 
 1. User authenticates with credentials.
