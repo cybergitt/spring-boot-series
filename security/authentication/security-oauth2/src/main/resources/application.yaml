@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: security-oauth2
+  profiles:
+    active: dev # Activates the 'dev' profile by default
+server:
+  port: '9090'
+logging:
+  level:
+    root: INFO
