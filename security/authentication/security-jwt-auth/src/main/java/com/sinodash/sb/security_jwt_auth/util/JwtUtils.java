@@ -14,7 +14,7 @@ import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtUtils {
-    private String secretKey = "QZLBiroj3ItaH3yQsnS//5MD2jNpXtuVVseBaZHqskI=";
+    private String secretKey = "your-secret-key-should-be-at-least-256-bits-long";
 
     private SecretKey getSigningKey() {
         return Keys.hmacShaKeyFor(secretKey.getBytes());
