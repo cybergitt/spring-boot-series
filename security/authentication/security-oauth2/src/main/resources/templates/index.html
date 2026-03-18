@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth2 Login Demo</title>
+    <style>
+        body {
+            background-color: #e8f5e9; /* Light green background */
+            font-family: Arial, sans-serif;
+            color: #2e7d32; /* Dark green text color */
+        }
+        h1 {
+            color: #388e3c; /* Medium green for header */
+        }
+        a {
+            color: #1b5e20; /* Dark green for links */
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid #1b5e20;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #a5d6a7; /* Lighter green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Spring Boot OAuth2</h1>
+
+    <!-- 1. Displayed only for UNAUTHENTICATED users -->
+    <div sec:authorize="isAnonymous()">
+        <p>Please log in with one of the following providers:</p>
+        <a th:href="@{/oauth2/authorization/google}">Login with Google</a><br/>
+        <a th:href="@{/oauth2/authorization/github}">Login with GitHub</a>
+    </div>
+</body>
+</html>

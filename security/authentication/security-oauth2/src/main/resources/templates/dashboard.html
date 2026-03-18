@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: #e8f5e9; /* Light green background */
+            font-family: Arial, sans-serif;
+            color: #2e7d32; /* Dark green text color */
+        }
+        h1 {
+            color: #388e3c; /* Medium green for header */
+        }
+        p {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 2. Displayed only for AUTHENTICATED users -->
+    <div sec:authorize="isAuthenticated()">
+        <h1>Welcome to Your Dashboard</h1>
+        <p>Hello, <span th:text="${username}"></span>!</p>
+        <p>You are logged in as: <b th:text="${email}"></b></p>
+        
+        <!-- Standard Spring Security Logout -->
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
