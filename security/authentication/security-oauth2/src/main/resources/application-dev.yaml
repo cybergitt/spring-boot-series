@@ -11,6 +11,7 @@ spring:
             client-id: YOUR_CLIENT_ID
             client-secret: YOUR_CLIENT_SECRET
             scope: 
+              - openid
               - profile
               - email
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
@@ -18,6 +19,8 @@ spring:
           github:
             client-id: YOUR_CLIENT_ID
             client-secret: YOUR_CLIENT_SECRET
+            # The 'user' scope is generally default for GitHub login
+            # scope: user, read:user, user:email
             scope: read:user
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
             client-name: GitHub
